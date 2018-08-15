@@ -11,13 +11,23 @@ http://archive.eso.org/wdb/wdb/eso/sched_rep_arc/query?progid=096.D-0080(A)
 
 Use ESO REFLEX
 
-http://archive.eso.org/wdb/wdb/eso/sched_rep_arc/query?progid=096.D-0080(A)
-
 # 3: Extract integrated and spatially resolved spectra
+
+Run the following scripts:
+
+* extract-integrated/extract.py
+* extraction-spatial/extract_fg1_final_spatial.py
+* extraction-spatial/extract_hf2-2_final_spatial.py
+* extraction-spatial/extract_ngc6326_final_spatial.py
+* extraction-spatial/extract_ngc6337_final_spatial.py
 
 # 4: Measure and identify the emission lines
 
+Run ALFA on the blue spectra, take the measured H beta flux and run on the red spectra, normalising to that value. Scale as described in the paper.
+
 # 5: Analyse the line lists
+
+Run NEAT on the combined line lists
 
 # 6: Figures
 
@@ -27,5 +37,5 @@ http://archive.eso.org/wdb/wdb/eso/sched_rep_arc/query?progid=096.D-0080(A)
 * Figures 4-7 were made from the spatially extracted 1D spectra generated in step 3, using the script figure4/plot.sh 
 * Figure 9 was made using a PHP script, not yet uploaded
 * Figure 10 was made using scripts in the folder figure10/; "make && ./distrib && ./plot.prg" will compile the code, generate the synthetic distribution, and plot it together with the actual distribution which is in a file compiled by hand.
-
-# 7: Tables
+* Figure 11 was generated using the script figure11/plot_adf_period.sh. This script contains hard-coded values for adfs rather than inheriting values from step 5.
+* Figure 12 was generated from lists of adfs and central star classifications from the literature. The script figure12/get.sh creates lists of adfs for various different types of nebula and central star classification; the script figure12/qqplot.R generates QQ plots.
