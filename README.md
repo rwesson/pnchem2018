@@ -9,8 +9,8 @@ http://archive.eso.org/wdb/wdb/eso/sched_rep_arc/query?progid=096.D-0080(A)
 
 # 2: Reduce the data
 
-## We used STARLINK software to do the data reduction
-## Cosmic ray cleaning was carried with both /bclean/ and this python implementation of /LAcosmic/: http://obswww.unige.ch/~tewes/cosmics_dot_py/
+* We used STARLINK software to do the data reduction
+* Cosmic ray cleaning was carried with both *bclean* and this python implementation of *LAcosmic*: http://obswww.unige.ch/~tewes/cosmics_dot_py/
 
 # 3: Extract integrated and spatially resolved spectra
 
