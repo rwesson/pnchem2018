@@ -9,7 +9,8 @@ http://archive.eso.org/wdb/wdb/eso/sched_rep_arc/query?progid=096.D-0080(A)
 
 # 2: Reduce the data
 
-Use ESO REFLEX
+## We used STARLINK software to do the data reduction
+## Cosmic ray cleaning was carried with both /bclean/ and this python implementation of /LAcosmic/: http://obswww.unige.ch/~tewes/cosmics_dot_py/
 
 # 3: Extract integrated and spatially resolved spectra
 
@@ -23,11 +24,11 @@ Run the following scripts:
 
 # 4: Measure and identify the emission lines
 
-Run ALFA on the blue spectra, take the measured H beta flux and run on the red spectra, normalising to that value. Scale as described in the paper.
+Run ALFA on the blue spectra, take the measured H beta flux and run on the red spectra, normalising to that value. Scale as described in the paper. ALFA version 1.0.123 was used for the measurements presented in the paper - (revision g6d7fe4, https://github.com/rwesson/ALFA/tree/6d7fe4b94fcf3fb9686a12269e2e749a3f6565d5).
 
 # 5: Analyse the line lists
 
-Run NEAT on the combined line lists
+Run NEAT on the combined line lists. Version 2.1.25 was used for the analysis presented in the paper (revision f86bb25, https://github.com/rwesson/NEAT/tree/f86bb251d8909ad41c07a67f712471a63cf1ee24)
 
 # 6: Figures
 
